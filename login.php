@@ -5,11 +5,13 @@ $password = $_GET['password'];
 
 if ($username == 'admin' && $password == 'test'){
 
-      header('Location: http://localhost/base/dashboard.php/');
+      header('Location: http://localhost/base/dashboard.php? username= '.$username );
       exit;
 
 }else{
-  echo "username or password is wrong";
+   if(!empty($_GET)){
+      echo "username or password is wrong";
+   }
 }
 //print($username);
 //print($password);
